@@ -10,7 +10,7 @@ typedef struct {
 
 #define MAX_TERMS 20 /*size of terms array*/
 typedef struct {
-	int coef; //«Y¼Æ
+	int coef; //Â«YÂ¼Ã†
 	int expo; 
 } polynomial_term;
 
@@ -119,7 +119,7 @@ void PrintPoly2(polynomial_term t[], int start, int finish)
 	}
 	for (int i = start; i <= finish; i++)
 	{
-		if (t[i].coef != 0 && t[i].expo != 0)  //¨S¦³±`¼Æ¶µ
+		if (t[i].coef != 0 && t[i].expo != 0)  //Â¨SÂ¦Â³Â±`Â¼Ã†Â¶Âµ
 		{
 			if (i == start)
 			{
@@ -135,7 +135,7 @@ void PrintPoly2(polynomial_term t[], int start, int finish)
 				printf("+ %dX^%d ", terms[i].coef, terms[i].expo);
 			}
 		}
-		else if (t[i].coef != 0 && t[i].expo == 0)  //±`¼Æ¶µ
+		else if (t[i].coef != 0 && t[i].expo == 0)  //Â±`Â¼Ã†Â¶Âµ
 		{
 			if (door == 1)
 			{
