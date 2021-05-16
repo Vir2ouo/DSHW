@@ -46,7 +46,7 @@ void inputTerm(polynomialTerm t[], int coef, int expo)
 	{
 		return;
 	}
-	if (t[0].coef == 0 && t[0].expo == 0)  //­Y­º¶µ¬°ªÅ ª½±µ©ñ¤J
+	if (t[0].coef == 0 && t[0].expo == 0)  //è‹¥é¦–é …ç‚ºç©º ç›´æŽ¥æ”¾å…¥
 	{
 		t[0].coef = coef;
 		t[0].expo = expo;
@@ -54,12 +54,12 @@ void inputTerm(polynomialTerm t[], int coef, int expo)
 	}
 	for (int i = 0; i < MAX_TERMS; i++)
 	{
-		if (t[i].expo == expo && t[i].coef!=0) //­«½Æ¦¸¤è¶µÂÐ»\(¥[¤W«Y¼Æ§PÂ_¥H°Ï§Oªì©l0­È)
+		if (t[i].expo == expo && t[i].coef!=0) //é‡è¤‡æ¬¡æ–¹é …è¦†è“‹(åŠ ä¸Šä¿‚æ•¸åˆ¤æ–·ä»¥å€åˆ¥åˆå§‹0å€¼)
 		{
 			t[i].coef = coef;
 			break;
 		}
-		else if (t[i].expo < expo && expo!=0) //´¡¤J¤£¬°±`¼Æªº¶µ
+		else if (t[i].expo < expo && expo!=0) //æ’å…¥ä¸ç‚ºå¸¸æ•¸çš„é …
 		{
 			for (int j = MAX_TERMS - 2; j >= i; j--)
 			{
@@ -71,7 +71,7 @@ void inputTerm(polynomialTerm t[], int coef, int expo)
 			return;
 		}
 	}
-	if (coef != 0 && expo == 0) //©ñ¤J±`¼Æ¶µ
+	if (coef != 0 && expo == 0) //æ”¾å…¥å¸¸æ•¸é …
 	{
 		for (int i = 0; i < MAX_TERMS; i++)
 		{
@@ -87,7 +87,7 @@ void inputTerm(polynomialTerm t[], int coef, int expo)
 
 void addArrayBasedPoly(polynomialTerm a[], polynomialTerm b[], polynomialTerm d[])
 {
-	//±ø¥ó:¹J¨ì¦P¦¸¤è¼Æ­n¥[´î
+	//æ¢ä»¶:é‡åˆ°åŒæ¬¡æ–¹æ•¸è¦åŠ æ¸›
 	int i = 0;
 	int j = 0;
 	int k = 0;
